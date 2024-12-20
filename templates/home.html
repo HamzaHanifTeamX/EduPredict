@@ -21,33 +21,6 @@
         border-radius: 8px;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
       }
-      legend {
-        font-size: 1.5em;
-        margin-bottom: 20px;
-        color: #555;
-      }
-      .form-group {
-        margin-bottom: 15px;
-      }
-      .form-group label {
-        display: block;
-        font-size: 1.1em;
-        margin-bottom: 5px;
-        color: #333;
-      }
-      .form-control {
-        width: 100%;
-        padding: 10px;
-        border: 1px solid #ddd;
-        border-radius: 5px;
-        font-size: 1em;
-        color: #333;
-      }
-      .form-control:focus {
-        border-color: #4caf50;
-        outline: none;
-        box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-      }
       .results {
         font-size: 1.2em;
         margin-top: 20px;
@@ -63,10 +36,10 @@
       <h1 class="text-center text-blue-600 text-4xl font-bold">
         Student Exam Performance Indicator
       </h1>
-      <form action="{{ url_for('predict_datapoint')}}" method="post">
+      <form action="{{ url_for('predict_datapoint')}}" method="post" class="space-y-5">
         <div class="form-group">
-          <label for="gender">Gender</label>
-          <select class="form-control" name="gender" id="gender" required>
+            <label for="gender" class="block text-gray-500 text-base font-semibold mb-2">Gender</label>
+          <select class="form-select w-full" name="gender" id="gender" required>
             <option value="" disabled selected>Select your Gender</option>
             <option value="male">Male</option>
             <option value="female">Female</option>
@@ -74,8 +47,8 @@
         </div>
 
         <div class="form-group">
-          <label for="ethnicity">Race or Ethnicity</label>
-          <select class="form-control" name="ethnicity" id="ethnicity" required>
+          <label for="ethnicity" class="block text-gray-500 text-base font-semibold mb-2">Race or Ethnicity</label>
+          <select class="form-select w-full" name="ethnicity" id="ethnicity" required>
             <option value="" disabled selected>Select Ethnicity</option>
             <option value="group A">Group A</option>
             <option value="group B">Group B</option>
@@ -86,11 +59,9 @@
         </div>
 
         <div class="form-group">
-          <label for="parental_level_of_education"
-            >Parental Level of Education</label
-          >
+          <label for="parental_level_of_education" class="block text-gray-500 text-base font-semibold mb-2">Parental Level of Education</label>
           <select
-            class="form-control"
+            class="form-select w-full"
             name="parental_level_of_education"
             id="parental_level_of_education"
             required
@@ -106,8 +77,8 @@
         </div>
 
         <div class="form-group">
-          <label for="lunch">Lunch Type</label>
-          <select class="form-control" name="lunch" id="lunch" required>
+          <label for="lunch" class="block text-gray-500 text-base font-semibold mb-2">Lunch Type</label>
+          <select class="form-select w-full" name="lunch" id="lunch" required>
             <option value="" disabled selected>Select Lunch Type</option>
             <option value="free/reduced">Free/Reduced</option>
             <option value="standard">Standard</option>
@@ -115,9 +86,9 @@
         </div>
 
         <div class="form-group">
-          <label for="test_preparation_course">Test Preparation Course</label>
+          <label for="test_preparation_course" class="block text-gray-500 text-base font-semibold mb-2">Test Preparation Course</label>
           <select
-            class="form-control"
+            class="form-select w-full"
             name="test_preparation_course"
             id="test_preparation_course"
             required
@@ -131,9 +102,9 @@
         </div>
 
         <div class="form-group">
-          <label for="writing_score">Writing Score out of 100</label>
+          <label for="writing_score" class="block text-gray-500 text-base font-semibold mb-2">Writing Score out of 100</label>
           <input
-            class="form-control"
+            class="form-input w-full"
             type="number"
             name="writing_score"
             id="writing_score"
@@ -145,9 +116,9 @@
         </div>
 
         <div class="form-group">
-          <label for="reading_score">Reading Score out of 100</label>
+          <label for="reading_score" class="block text-gray-500 text-base font-semibold mb-2">Reading Score out of 100</label>
           <input
-            class="form-control"
+            class="form-input w-full"
             type="number"
             name="reading_score"
             id="reading_score"
